@@ -1,0 +1,16 @@
+<div class="container">
+  <h4>Numbers</h4>
+
+  <div [formGroup]="list">
+<div formArrayName="numbers"
+*ngFor="let number of getControls(); let i =index">
+
+
+    <input [formControlName]="i" type="number" placeholder="Enter phone number" />
+
+
+  </div>
+  <button class="btn btn-primary" (click)="addNumber()">Add number</button><br>
+    <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+  </div>
+

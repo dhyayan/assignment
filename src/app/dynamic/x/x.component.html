@@ -1,0 +1,25 @@
+<div class="p-2">
+<div *ngIf="!nameSaved">
+  <input type="text" placeholder="Panel name" #pname>
+  <button class="btn btn-primary" (click)="onSave()">Save</button>
+</div>
+<div *ngIf="nameSaved">
+  {{ panelName }}
+</div>
+      <button class="btn btn-success" [disabled]="!nameSaved"  (click)="onEdit()">Edit</button>
+      <button class="btn btn-primary" (click)="createY()">+</button>
+</div>
+<div class="p-1">
+  <div *ngIf="nameAdded">
+    <p *ngFor="let name of names"  >{{ name }}</p>
+  </div>
+
+</div>
+<div class="p-2" >
+  <app-y *ngFor="let c of count" (nameAdded)="onNameAdded($event)"></app-y>
+
+</div>
+
+
+
+

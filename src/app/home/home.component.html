@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <input type="number" [(ngModel)]="index">
+    <button class="btn btn-success" (click)="showValue(index)">Show </button>
+
+    <p *ngIf="clicked">{{this.answer}}</p>
+  </div>
+  </div>
+  <div class="container">
+      <app-dynamic></app-dynamic>
+</div>
+
+
+
